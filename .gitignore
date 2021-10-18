@@ -1,1 +1,5 @@
-node_modules
+# Dependency Directories
+node_modules/
+
+# Runtime Data
+package-lock.json
