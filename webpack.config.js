@@ -38,7 +38,6 @@ devServer: {
     host: 'localhost',
     port: 8080,
     historyApiFallback: true,
-    inline: true,
     proxy: { "/api": { target: 'http://localhost:3000', secure: false }
     },
 },
