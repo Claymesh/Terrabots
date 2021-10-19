@@ -3,7 +3,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import React, { useState, useEffect, useContext } from 'react';
 
 
-const Docs = () => {
+const FAQ = () => {
     return(
         <div>
         </div>
@@ -11,4 +11,4 @@ const Docs = () => {
     )
 }
 
-export default Docs
+export default FAQ

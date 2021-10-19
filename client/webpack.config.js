@@ -2,7 +2,7 @@ var path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: ["./client/src/index.js"],
+    entry: ["./src/index.js"],
     output: {
         publicPath: "/",
         path: path.resolve(__dirname, "build"),
@@ -16,6 +16,20 @@ module.exports = {
                 use: {
                   loader: "babel-loader",
                 },
+              },
+              {
+                test: /\.(scss)$/,
+                use: [
+                  {
+                    loader: "style-loader",
+                  },
+                  {
+                    loader: "css-loader",
+                  },
+                  {
+                    loader: "sass-loader",
+                  },
+                ],
               },
               {
                 test: /\.css$/,
@@ -44,7 +58,7 @@ devServer: {
 plugins: [
 
     new HtmlWebpackPlugin({
-        template: 'client/src/index.html'
+        template: 'src/index.html'
     })
 ]
 }

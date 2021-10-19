@@ -1,8 +1,2 @@
-# Dependency Directories
-node_modules/
-
-# Runtime Data
-package-lock.json
-
-# Transpiled Data
-build/
+node_modules
+.env
