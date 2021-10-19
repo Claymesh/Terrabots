@@ -1,26 +1,33 @@
-import React from 'react'
-import logo from '../assets/head.png'
-import textlogo from '../assets/textlogo.png'
-
+// MODULES
 import { Route, Switch, Link } from 'react-router-dom';
-import React, { useState, useEffect, useContext } from 'react';
+import React from 'react';
+
+// COMPONENTS
+import { Container, Navbar, Nav } from "react-bootstrap"
+
+// ASSETS
+import _claymesh from "../../../assets/images/claymesh.png"
 
 
-const App = () => {
-    return(
-        <div class='nav-container'>
-            <img class='head' src={logo}/>
-            <img class='textlogo' src={textlogo}/>
-            <div class="topnav">
-                <a class = "subnav" href="#news">API </a>
-                <a class = "subnav" href="#contact">Docs </a>
-                <a class = "subnav" href="#about">Discord </a>
-            </div>
-            <a href="something" class="button3">Generate</a>
-            <a href="https://www.instagram.com/deffiedeff/" class="signature">©DEFFIE 2021</a>
-        </div>
-
+const Footer = () => {
+    return (
+        <Navbar bg="none" variant="dark" fixed='bottom' className='footer-nav mb-4'>
+            <Container>
+                <Nav className="mx-auto d-flex align-items-center justify-content-space-around navbar-row">
+                    <Nav.Link><img
+                        src={_claymesh}
+                        width="20"
+                        height="20"
+                        className="claymesh-img"
+                        alt="Powered by the Claymesh API"
+                    />
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/faq">FAQ</Nav.Link>
+                    <Nav.Link as={Link} to="/support">SUPPORT</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
     )
 }
 
-export default App
+export default Footer
