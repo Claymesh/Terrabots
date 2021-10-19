@@ -8,7 +8,7 @@ import { Nav, Container, Row, Col, Image } from 'react-bootstrap'
 const Navbar = () => {
     // active Nav Styling
     var active = {
-        color: 'white',
+        color: 'wheat',
     };
 
     return (

@@ -6,3 +6,4 @@ package-lock.json
 
 # Transpiled Data
 build/
+.DS_Store
