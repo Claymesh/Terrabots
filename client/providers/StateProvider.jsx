@@ -4,31 +4,15 @@ import React, { useState } from 'react';
 export const StateContext = React.createContext({})
 
 const StateProvider = ({ children }) => {
-
     // create a set of variables to use and change
-    const [active, setActive] = useState(false);
-    const [loggedIn, setLoggedIn] = useState(false)
-    const [address, setAddress] = useState('')
-    const [name, setName] = useState('')
+    const [address, setAddress] = useState(null)
     // create a set of function to change said variables
-    const activeHandler = () => {
-        setActive(!active);
-    }
-    const loggedInHandler = () => {
-        setLoggedIn(!loggedIn);
-    }
     const addressHandler = (userAddress) => {
         setAddress(userAddress);
     }
-    const nameHandler = (userName) => {
-        setName(userName);
-    }
 return (
     <StateContext.Provider value={{
-        active, activeHandler,
-        loggedIn, loggedInHandler,
         address, addressHandler,
-        name, nameHandler
     }}>
         {children}
     </StateContext.Provider>

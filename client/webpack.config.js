@@ -1,5 +1,6 @@
 var path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
     entry: ["./src/index.js"],
@@ -8,6 +9,7 @@ module.exports = {
         path: path.resolve(__dirname, "build"),
         filename: "bundle.js",
     },
+    devtool: "source-map",
     module: {
         rules: [
             {
@@ -28,6 +30,17 @@ module.exports = {
                   },
                   {
                     loader: "sass-loader",
+                  },
+                ],
+              },
+              {
+                test: /\.svg$/,
+                use: [
+                  {
+                    loader: "svg-url-loader",
+                    options: {
+                      limit: 10000,
+                    },
                   },
                 ],
               },
@@ -59,6 +72,7 @@ plugins: [
 
     new HtmlWebpackPlugin({
         template: 'src/index.html'
-    })
+    }),
+    new NodePolyfillPlugin()
 ]
 }

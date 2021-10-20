@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 // COMPONENTS
 import { Nav, Container, Row, Col, Image } from 'react-bootstrap'
 
+
 const Navbar = () => {
     // active Nav Styling
     var active = {
@@ -13,7 +14,8 @@ const Navbar = () => {
 
     return (
         <Fragment>
-            <Container>
+
+            <Container className='navbar-container '>
                 <Row className="mt-3">
                     <Col>
                         <Nav variant="light" className="justify-content-center navbar-row" activeKey="/">

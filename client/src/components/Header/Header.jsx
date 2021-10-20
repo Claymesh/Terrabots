@@ -17,9 +17,9 @@ const Header = () => {
 
     return (
         <Fragment>
-            <Container className="navbar-container mt-5">
+            <Container className="mt-5">
                 <Row className="">
-                    <Col xs={8} sm={6} md={4} className="m-auto">
+                    <Col xs={7} sm={5} md={3} className="m-auto">
                         <img
                             className="p-3 d-block mx-auto img-fluid w-40"
                             src={_head}

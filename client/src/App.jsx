@@ -1,5 +1,6 @@
 import { Route, Switch, Link } from 'react-router-dom';
 import React, { useState, useEffect, useContext, Fragment } from 'react';
+import { MetamaskStateProvider } from "use-metamask";
 
 // PAGES
 import Home from "./pages/Home"
@@ -14,6 +15,7 @@ import Support from './pages/Support';
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Header from './components/Header';
+import Lock from "./components/Lock"
 
 
 // ASSETS
@@ -28,6 +30,7 @@ import '@fontsource/roboto/700.css';
 const App = () => {
 	return (
 		<Fragment>
+			<Route path="/" component={Lock}></Route>
 			<Route path="/" component={Header}></Route>
 			<Route path="/" component={Navbar}></Route>
 			<Switch>
