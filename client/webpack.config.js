@@ -60,7 +60,7 @@ module.exports = {
 resolve: {
     extensions: ['.js', '.jsx'],
   },
-mode: 'production',
+mode: 'development',
 devServer: {
     host: 'localhost',
     port: 8080,

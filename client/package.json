@@ -17,6 +17,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.4.0",
     "ipfs-http-client": "^53.0.1",
+    "mdb-ui-kit": "^3.9.0",
     "path": "^0.12.7",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.4",

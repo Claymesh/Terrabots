@@ -14,7 +14,7 @@ const Footer = () => {
         <Navbar bg="none" variant="dark" fixed='bottom' className='footer-nav mb-4'>
             <Container>
                 <Nav className="mx-auto d-flex align-items-center justify-content-space-around navbar-row">
-                    <Nav.Link><img
+                    <Nav.Link href="https://github.com/Claymesh" target="_blank" rel="noopener noreferrer" alt="Github"><img
                         src={_claymesh}
                         width="20"
                         height="20"
@@ -23,7 +23,7 @@ const Footer = () => {
                     />
                     </Nav.Link>
                     <Nav.Link as={Link} to="/faq">FAQ</Nav.Link>
-                    <Nav.Link as={Link} to="/support">SUPPORT</Nav.Link>
+                    <Nav.Link href="mailto:terrabotsnft@gmail.com">SUPPORT</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>

@@ -46,7 +46,7 @@ const Home = () => {
             <Container className="mt-2 mb-3 text-center home-container">
                 {address ? null : <Button onClick={handleConnect} className='blue-cm-button mt-3' variant="primary">{buttonText}</Button>}
                 {window.ethereum.selectedAddress ? <Minter _web={web3}></Minter> : null}
-                <Row className="pt-4">
+                <Row className="pt-4 desc">
                     <Col>
                         <i>
                             Terrabots are unique art pieces that <br /> are created autonomously in the cloud.

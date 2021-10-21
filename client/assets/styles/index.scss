@@ -3,27 +3,28 @@
 	font-family: "Roboto" !important;
 }
 
-html, body {
-    background-image: linear-gradient(45deg, rgb(68, 173, 115), rgb(108, 188, 202));
+html,
+body {
+	background-image: linear-gradient(45deg, rgb(68, 173, 115), rgb(108, 188, 202));
 	height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0;
+	width: 100%;
+	overflow-x: hidden;
+	margin: 0;
 }
 
 body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-    opacity: 1;
+	opacity: 1;
 	animation-name: fadeIn;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in;
 	animation-duration: 1.5s;
 	margin-left: auto;
 	margin-right: auto;
-    background-image: linear-gradient(45deg, rgb(68, 173, 115), rgb(108, 188, 202));
-    height: 100%;
+	background-image: linear-gradient(45deg, rgb(68, 173, 115), rgb(108, 188, 202));
+	height: 100%;
 }
 
 .pointer:hover {
@@ -36,57 +37,96 @@ body {
 	padding: 10px 20px;
 }
 
-.font-primary {
+.font-thin {
+	font-weight: 100!important;
+	font-size: 0.95em;
+}
 
-	@media (min-width: 300px) { font-size: 3em }
+.text-wheat {
+	color: rgb(236, 216, 179) !important;
+}
+
+.text-white {
+	color: rgb(230, 225, 218) !important;
+}
+
+
+
+.font-primary {
+	@media (min-width: 300px) {
+		font-size: 3em;
+	}
 	// Small devices (landscape phones, 576px and up)
-	@media (min-width: 576px) { font-size: 3.5em }
+	@media (min-width: 576px) {
+		font-size: 3.5em;
+	}
 
 	// Medium devices (tablets, 768px and up)
-	@media (min-width: 768px) { font-size: 3.75em }
+	@media (min-width: 768px) {
+		font-size: 3.75em;
+	}
 
 	// Large devices (desktops, 992px and up)
-	@media (min-width: 992px) { font-size: 4.25em  }
+	@media (min-width: 992px) {
+		font-size: 4.25em;
+	}
 
 	// Extra large devices (large desktops, 1200px and up)
-	@media (min-width: 1200px) { font-size: 4.5em }
-
+	@media (min-width: 1200px) {
+		font-size: 4.5em;
+	}
 }
 
 .font-secondary {
-
-	@media (min-width: 300px) { font-size: 1.5em }
+	@media (min-width: 300px) {
+		font-size: 1.5em;
+	}
 
 	// Small devices (landscape phones, 576px and up)
-	@media (min-width: 576px) { font-size: 1.75em }
+	@media (min-width: 576px) {
+		font-size: 1.75em;
+	}
 
 	// Medium devices (tablets, 768px and up)
-	@media (min-width: 768px) { font-size: 1.95em }
+	@media (min-width: 768px) {
+		font-size: 1.95em;
+	}
 
 	// Large devices (desktops, 992px and up)
-	@media (min-width: 992px) { font-size: 2.1em  }
+	@media (min-width: 992px) {
+		font-size: 2.1em;
+	}
 
 	// Extra large devices (large desktops, 1200px and up)
-	@media (min-width: 1200px) { font-size: 2.25em }
-
+	@media (min-width: 1200px) {
+		font-size: 2.25em;
+	}
 }
 
 .font-tertiary {
-
-	@media (min-width: 300px) { font-size: 1.00em }
+	@media (min-width: 300px) {
+		font-size: 1em;
+	}
 
 	// Small devices (landscape phones, 576px and up)
-	@media (min-width: 576px) { font-size: 1.15em }
+	@media (min-width: 576px) {
+		font-size: 1.15em;
+	}
 
 	// Medium devices (tablets, 768px and up)
-	@media (min-width: 768px) { font-size: 1.35em }
+	@media (min-width: 768px) {
+		font-size: 1.35em;
+	}
 
 	// Large devices (desktops, 992px and up)
-	@media (min-width: 992px) { font-size: 1.45em  }
+	@media (min-width: 992px) {
+		font-size: 1.45em;
+	}
 
 	// Extra large devices (large desktops, 1200px and up)
-	@media (min-width: 1200px) { font-size: 1.55em }
-
+	@media (min-width: 1200px) {
+		font-size: 1.55em;
+	}
 }
 
 .container {
@@ -98,31 +138,31 @@ footer {
 }
 
 .text-primary {
-	color: $primary!important;
+	color: $primary !important;
 }
 
 .text-secondary {
-	color: $secondary!important;
+	color: $secondary !important;
 }
 
 .text-tertiary {
-	color: $tertiary!important;
+	color: $tertiary !important;
 }
 
 .text-black {
-	color: $black!important;
+	color: $black !important;
 }
 
 .text-info {
-	color: $info!important;
+	color: $info !important;
 }
 
 .text-green {
-	color: $green!important;
+	color: $green !important;
 }
 
 .text-red {
-	color: $red!important;
+	color: $red !important;
 }
 
 .btn-circle {
@@ -146,18 +186,18 @@ footer {
 	// color: $primary!important;
 	// border-color: $primary!important;
 	&:hover {
-		color: #fff!important;
-		background-color: $primary!important;
+		color: #fff !important;
+		background-color: $primary !important;
 	}
 }
 
 .btn-success {
-	background-color: $info!important;
-	border-color: $info!important;
-	color: $white!important;
+	background-color: $info !important;
+	border-color: $info !important;
+	color: $white !important;
 	&:hover {
-		background-color: $info-hover!important;
-		border-color: $info-hover!important;
+		background-color: $info-hover !important;
+		border-color: $info-hover !important;
 	}
 }
 
@@ -173,7 +213,6 @@ footer {
 		border: solid 2px #ffffff;
 		color: black;
 		transition: 0.5s ease-in-out;
-
 	}
 }
 
@@ -186,7 +225,7 @@ footer {
 	&:hover {
 		background-color: $secondary;
 		transition: 0.5s;
-}
+	}
 }
 
 // .btn-danger {
@@ -206,11 +245,11 @@ footer {
 // }
 
 .list-group-horizontal {
-	border: none!important;
-	border-radius: 0!important;
+	border: none !important;
+	border-radius: 0 !important;
 	.list-group-item {
-		background-color: transparent!important;
-		padding: 5px!important;
+		background-color: transparent !important;
+		padding: 5px !important;
 	}
 }
 
@@ -220,32 +259,32 @@ footer {
 		rgba(255, 136, 124, 1) 0%,
 		rgba(182, 50, 95, 1) 35%,
 		rgba(255, 173, 0, 1) 100%
-	  ) !important; /* For Chrome and Safari */
-	  background-image: -moz-linear-gradient(
+	) !important; /* For Chrome and Safari */
+	background-image: -moz-linear-gradient(
 		90deg,
 		rgba(255, 136, 124, 1) 0%,
 		rgba(182, 50, 95, 1) 35%,
 		rgba(255, 173, 0, 1) 100%
-	  ) !important; /* For old Fx (3.6 to 15) */
-	  background-image: -ms-linear-gradient(
+	) !important; /* For old Fx (3.6 to 15) */
+	background-image: -ms-linear-gradient(
 		90deg,
 		rgba(255, 136, 124, 1) 0%,
 		rgba(182, 50, 95, 1) 35%,
 		rgba(255, 173, 0, 1) 100%
-	  ) !important; /* For pre-releases of IE 10*/
-	  background-image: -o-linear-gradient(
+	) !important; /* For pre-releases of IE 10*/
+	background-image: -o-linear-gradient(
 		90deg,
 		rgba(255, 136, 124, 1) 0%,
 		rgba(182, 50, 95, 1) 35%,
 		rgba(255, 173, 0, 1) 100%
-	  ) !important; /* For old Opera (11.1 to 12.0) */
-	  background-image: linear-gradient(
+	) !important; /* For old Opera (11.1 to 12.0) */
+	background-image: linear-gradient(
 		90deg,
 		rgba(255, 136, 124, 1) 0%,
 		rgba(182, 50, 95, 1) 35%,
 		rgba(255, 173, 0, 1) 100%
-	  ) !important; /* Standard syntax; must be last */
-	  color: transparent !important;
-	  -webkit-background-clip: text;
-	  background-clip: text;
+	) !important; /* Standard syntax; must be last */
+	color: transparent !important;
+	-webkit-background-clip: text;
+	background-clip: text;
 }
