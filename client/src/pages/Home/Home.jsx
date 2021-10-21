@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext, Fragment } from "react";
 import { Nav, Container, Row, Col, Image, Button } from 'react-bootstrap'
 
 import { StateContext } from "../../../providers/StateProvider";
@@ -42,10 +42,19 @@ const Home = () => {
 
 
     return (
-        <Container className="mt-5 mb-3 text-center">
-            {address ? null : <Button onClick={handleConnect} className='blue-cm-button mt-3' variant="primary">{buttonText}</Button>}
-            {window.ethereum.selectedAddress ? <Minter _web={web3}></Minter> : null}
-        </Container>
+        <Fragment>
+            <Container className="mt-2 mb-3 text-center home-container">
+                {address ? null : <Button onClick={handleConnect} className='blue-cm-button mt-3' variant="primary">{buttonText}</Button>}
+                {window.ethereum.selectedAddress ? <Minter _web={web3}></Minter> : null}
+                <Row className="pt-4">
+                    <Col>
+                        <i>
+                            Terrabots are unique art pieces that <br /> are created autonomously in the cloud.
+                        </i>
+                    </Col>
+                </Row>
+            </Container>
+        </Fragment>
     )
 }
 

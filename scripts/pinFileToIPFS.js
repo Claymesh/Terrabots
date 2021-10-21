@@ -17,12 +17,32 @@ const clientURL = process.env.CLIENT_URL;
 const provider = new HDWalletProvider(mnemonic, clientURL);
 const web3 = new Web3(provider);
 
+const AWS = require('aws-sdk');
+const fileName = "temp.png";
+const s3AccessKeyId = process.env.s3AccessKeyId;
+const s3AccessSecret = process.env.s3AccessSecret;
+const s3Region = process.env.s3Region;
+const s3Bucket = process.env.s3Bucket;
+
 // Calls Pinata API's to pin file to IPFS
 const pinFileToIPFS = async (filePath, arg) => {
   const pinataEndpoint = process.env.PINATA_ENDPOINT;
   const pinataApiKey = process.env.PINATA_API_KEY;
   const pinataApiSecret = process.env.PINATA_API_SECRET;
   const form_data = new FormData();
+
+  s3 = new AWS.S3({
+    credentials: {
+      accessKeyId: s3AccessKeyId,
+      secretAccessKey: s3AccessSecret,
+      region: s3Region
+    }
+  });
+
+  let s3Stream = s3.getObject({
+    Bucket: s3Bucket,
+    Key: fileName
+  }).createReadStream();
 
   if (arg) {
     var pathToModule = require.resolve('../data/metadata.json');
@@ -34,20 +54,13 @@ const pinFileToIPFS = async (filePath, arg) => {
 
     let current = metadata;
     current.name = `Terrabot #${parseInt(tokenID) + 1}`
-    // var updatedName = current.name;
-    // _tokenID = tokenID + 1
-    // updatedName = "Terrabot #" + _tokenID;
-
-
-    // current.name = updatedName;
     current.image = ipfsURL;
-    // console.log('   ___', current)
     fs.writeFileSync(pathToModule, JSON.stringify(current), 'utf8');
   };
 
 
   try {
-    form_data.append('file', fs.createReadStream(filePath));
+    form_data.append('file', s3Stream);
     const request = {
       method: 'post',
       url: pinataEndpoint,

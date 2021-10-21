@@ -1,8 +1,9 @@
+require('dotenv').config()
 const path = require("path");
 const express = require("express");
 const cors = require('cors');
 
-require('dotenv').config()
+
 
 const app = express();
 const PORT = process.env.PORT;
@@ -21,11 +22,13 @@ app.use(express.static(path.resolve(__dirname, 'client')));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
+
+
 }
 
-app.get('/about', (req,res) => {
-  res.send('about')
-})
+const routes = require('./routes');
+app.use(routes)
+
 
 
 app.get("*", (req, res) => {

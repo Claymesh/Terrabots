@@ -1,6 +1,6 @@
 const fs = require('fs').promises;
 const path = require('path');
-const config = require('config');
+// const config = require('config');
 
 // https://stackoverflow.com/questions/36856232/write-add-data-in-json-file-using-node-js
 // Accepts json data and stores in specified filePath.
@@ -9,7 +9,7 @@ const storeDataToFile = async (jsonData) => {
   console.log(jsonData)
   try {
     // const filePath = require.resolve('../data/ipfsHash.json');
-    const filePath = path.join(__dirname, config.get('ipfsFile.location'));
+    const filePath = path.join(__dirname, '../data/ipfsHash.json');
 
     const ipfsFileExists = await fileExists(filePath);
     if (!ipfsFileExists) {
